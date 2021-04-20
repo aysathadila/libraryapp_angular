@@ -1,0 +1,11 @@
+
+div {
+  /* position: absolute; */
+  /* right: 0;
+  bottom: 0;
+  left: 0; */
+  margin-top: 15%;
+  padding: 1rem;
+  text-align: center;
+  background-color: rgb(110, 115, 121);
+}

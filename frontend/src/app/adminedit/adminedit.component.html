@@ -1,0 +1,35 @@
+<app-adminheader></app-adminheader>
+<br>
+<br>
+<br>
+
+
+<form id="updateForm" (submit)="updateKdrama(kdrama)">
+    <table>
+        <tr>
+            <td rowspan="6"><img src="{{kdrama.image}}" height="165px" width="124px"></td>
+            <td>Id</td>
+            <td><input type="number" value="{{kdrama._id}}" name="_id" [(ngModel)]="kdrama._id" disabled></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" value="{{kdrama.title}}" name="title" [(ngModel)]="kdrama.title"></td>
+        </tr>
+        
+        <tr>
+            <td>Genre</td>
+            <td><input type="text" value="{{kdrama.genre}}" name="genre" [(ngModel)]="kdrama.genre"></td>
+        </tr>
+        <tr>
+            <td>Description</td>
+            <td><input type="text" value="{{kdrama.description}}" name="description" [(ngModel)]="kdrama.description"></td>
+        </tr>
+        <tr>
+            <td>Cover</td>
+            <td colspan="2"><input type="text" value="{{kdrama.image}}" style="width: max-content;" name="image" [(ngModel)]="kdrama.image"></td>
+        </tr>
+    </table>
+    <button type="submit" class="btn btn-danger" style="cursor:pointer; width: 100px; margin: 10px">Update</button>
+    <a routerLink="/admindashboard/kdramas" class="btn btn-warning" style="cursor:pointer" style="width: 100px;"> Cancel</a>
+</form>
+<hr>

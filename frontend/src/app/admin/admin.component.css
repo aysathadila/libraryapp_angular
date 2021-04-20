@@ -1,0 +1,22 @@
+.container{
+    margin-top: 6%;
+    background-color: rgb(179, 221, 241);
+    border-radius: 6px;
+    padding: 9px;
+    width: 35%;
+    box-shadow: darkkhaki 5px 5px 5px;
+}
+/* .bg{
+    background-image: url(https://10mag.com/wp-content/uploads/2020/01/anges-last-mission-love-korean-drama-2019-kdrama.jpg);
+    
+} */
+h3{
+    margin-top: 9%;
+    margin-left: 39%;
+    margin-right : 43%;
+   font-family:cursive ;
+   background-color: yellowgreen;
+}
+p{
+    text-align: center;
+}

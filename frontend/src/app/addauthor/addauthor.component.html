@@ -1,0 +1,46 @@
+<br>
+<br>
+<br>
+
+
+
+<h3>Enter author details</h3>
+<hr>
+
+ <div class="container">
+    <form (ngSubmit) = "addauthor()">
+    
+    
+       <fieldset>
+        <div class="form-group">
+          <label for="id">ID</label>
+          <input type="number" id="id" class="form-control" placeholder="Enter ID No" name="id" [(ngModel)]="authorItem.id" required>
+        </div>
+        <div class="form-group">
+            <label for="description">Author</label>
+            <input type="textfield" id="description" class="form-control" placeholder="Enter author name" name="description" [(ngModel)]="authorItem.description" required>
+          </div>
+         <div class="form-group">
+            <label for="title">Title</label>
+            <input type="text" id="title" class="form-control" placeholder="Enter name of the book" name="title" [(ngModel)]="authorItem.title" required>
+          </div>
+          
+         <div class="form-group">
+           <label for="genre">Genre</label>
+           <input type="text" id="email" class="form-control" placeholder="Enter book genre" name="genre" [(ngModel)]="authorItem.genre" required>
+         </div>
+         
+         <div class="form-group">
+            <label for="img">Cover</label>
+            <input type="text" id="img" class="form-control" placeholder="Enter link for cover image" name="image" [(ngModel)]="authorItem.image" required>
+          </div>
+
+         <button type="submit" class="btn btn-primary" style="background-color: antiquewhite; color: darkcyan;">
+            Add author</button>
+       </fieldset>
+     </form>
+   
+   </div>
+
+
+

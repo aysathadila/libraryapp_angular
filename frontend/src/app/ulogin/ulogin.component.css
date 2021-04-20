@@ -1,0 +1,15 @@
+.container{
+    margin-top: 6%;
+    background-color: rgb(179, 221, 241);;
+    border-radius: 6px;
+    padding: 9px;
+    width: 70%;
+    box-shadow: darkkhaki 5px 5px 5px;
+}
+h3{
+    margin-top: 1%;
+    margin-left: 39%;
+    margin-right : 39%;
+   font-family:cursive ;
+   background-color: yellowgreen;
+}

@@ -1,0 +1,91 @@
+<app-header></app-header>
+<div>
+  <h3>SignUp</h3>
+<!-- <div class="container">
+
+    <div class="row">
+      
+      <div class="col-md-12"> 
+        
+        <div class="panel">
+          <div class="panel-body">
+            <form (ngSubmit)="addUser()" #signupForm="ngForm">
+              <div class="col-lg-12">
+                      <div class="form-row">
+                        <div class="form-group col-md-6">
+                          <label for="inputEmail4" >Email</label>
+                          <input type="email" class="form-control" id="email1" name="email" [(ngModel)]=userItem.email>
+                          
+                        </div>
+                        <div class="form-group col-md-6">
+                          <label for="inputPassword4">Password</label>
+                          <input type="password" class="form-control" id="inputPassword4" name="password" [(ngModel)]=userItem.password required #password="ngModel" minlength="6">
+                        <div *ngIf="password.invalid && password.touched">
+                        <small style="margin: 2px; color: red; font-weight: 500;" *ngIf="password.errors.required">Password is required</small>
+                        <small style="margin: 2px; color: red; font-weight: 500;" *ngIf="password.errors.minlength">Minimum length is 6</small>
+                        </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="inputname">Name</label>
+                        <input type="text" class="form-control" id="name" placeholder="enter your name" name="name"  [(ngModel)]=userItem.name>
+                        <label for="error" id="error4"></label>
+                        <label for="error" id="error4"></label>
+                      </div>
+                      <div class="form-group">
+                        <label for="mobilenumber">Mobile Number</label>
+                        <input type="text" class="form-control" id="number" placeholder="enter your number" name="phone">
+                        <label for="error" id="error3"></label>
+                      </div>
+                     
+                     
+                    
+                      <button type="submit" class="btn btn-primary">Sign up</button>
+              </div>
+              </form>
+                            
+  
+             
+                     
+          </div>
+         </div>
+      </div>
+     </div>
+  </div> -->
+
+  <div class="container">
+    <form (ngSubmit)="addUser()" #signupForm="ngForm">
+       <fieldset>
+         <div class="form-group">
+            <label for="name">Name</label>
+            <input type="text" name="name" class="form-control" placeholder="Enter your name" [(ngModel)]=userItem.name>
+          </div>
+          
+         <div class="form-group">
+           <label for="email">Email</label>
+           <input type="text" name="email" class="form-control" placeholder="Enter your Email" [(ngModel)]=userItem.email>
+         </div>
+         <div class="form-group">
+           <label for="password">Password</label>
+           <input type="password" name="password" class="form-control" placeholder="Enter your password" [(ngModel)]=userItem.password required #password="ngModel" minlength="6">
+           <div *ngIf="password.invalid && password.touched">
+              <small style="margin: 2px; color: red; font-weight: 500;" *ngIf="password.errors.required">Password is required</small>
+              <small style="margin: 2px; color: red; font-weight: 500;" *ngIf="password.errors.minlength">Minimum length is 6</small>
+           </div>
+         </div>
+         <div class="form-group">
+            <label for="cpassword">Confirm Password</label>
+            <input type="password" name="cpassword" class="form-control" placeholder="Re-enter your password" [(ngModel)]=user.userpass required #cpass="ngModel" pattern="{{password.value}}">
+            <div *ngIf="cpass.invalid && cpass.touched">
+              <small style="margin: 2px; color: red; font-weight: 500;" *ngIf="cpass.errors.pattern">Passwords donot match</small>
+           </div>
+            
+          </div>
+         
+         <button type="submit" class="btn btn-primary" style="background-color: antiquewhite; color: darkcyan;">Create my account</button>
+       </fieldset>
+     </form>
+   
+   </div>
+
+</div>

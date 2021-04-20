@@ -1,0 +1,53 @@
+<br>
+<br>
+<br>
+
+
+
+<div class="container">
+    <h3>{{title}}</h3> <hr>
+    <router-outlet></router-outlet><br>
+  
+      <div class='table-responsive'>
+        <table class='table' *ngIf = 'kdramas && kdramas.length'>
+          <thead>
+            <tr>
+              
+              <th>Title</th>
+              <th>Genre</th>
+              <th>Author</th>
+              <th></th>
+              <th></th>
+            </tr>
+           
+          </thead>
+          <tbody>  
+              <tr *ngFor='let kdrama of kdramas'>
+                  
+                  <td>{{ kdrama.title }}</td>
+                  <td>{{ kdrama.genre }}</td>
+                  <td><div [ngClass]="{'show-less': showShortDesciption}"> 
+                    {{ kdrama.description }}</div>
+                    <!-- <button  type="button" class="text-right show-button" (click)="alterDescriptionText()">
+                    {{ showShortDesciption ? 'Show more': 'Show less' }} </button> -->
+                  </td>
+                  <td>
+                    <a [routerLink]="[':{{kdrama._id}}']" [queryParams]="{ _id: kdrama._id, title: kdrama.title, genre: kdrama.genre, description: kdrama.description, image: kdrama.image}" class="btn btn-warning" style="cursor:pointer" *ngIf="_auth.adminlogged()" style="margin-bottom: 5px; width: 100px;"> Edit</a><br>
+                    <button class="btn btn-danger" style="cursor:pointer; width: 100px;" *ngIf="_auth.adminlogged()"(click)="deleteKdrama(kdrama)"> Delete</button>
+                    
+                  <!-- <button class="btn btn-danger" style="cursor:pointer; width: 150px;" *ngIf="_auth.userlogged()"(click)="addFavs(book)"> Add Review</button>   -->
+                    
+                  <a [routerLink]="[':{{kdrama._id}}']" [queryParams]="{ _id: kdrama._id, title: kdrama.title, genre: kdrama.genre, description: kdrama.description, image: kdrama.image}" class="btn btn-warning" style="cursor:pointer" *ngIf="_auth.userlogged()" style="margin-bottom: 5px; width: 100px;"> read more</a>
+                  
+                  <br>
+                  <!-- <a [routerLink]="['/userdashboard/:{{user.userid}}/reviews']"  class="btn btn-warning" style="cursor:pointer" *ngIf="_auth.userlogged()" style="margin-bottom: 5px; width: 100px;">  Reviews</a> -->
+
+               
+                  
+                  </td>
+                  
+                </tr>              
+          </tbody>
+        </table>
+      </div>  
+  </div>
